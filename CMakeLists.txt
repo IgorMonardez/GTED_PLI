@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(PLI main.c
         TAD_UELGraph.c
-        TAD_UELGraph.c)
+        TAD_AGraph.c
+        ILP.c)

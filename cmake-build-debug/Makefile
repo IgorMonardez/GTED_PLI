@@ -123,6 +123,60 @@ PLI/fast:
 	$(MAKE) -f CMakeFiles/PLI.dir/build.make CMakeFiles/PLI.dir/build
 .PHONY : PLI/fast
 
+ILP.o: ILP.c.o
+
+.PHONY : ILP.o
+
+# target to build an object file
+ILP.c.o:
+	$(MAKE) -f CMakeFiles/PLI.dir/build.make CMakeFiles/PLI.dir/ILP.c.o
+.PHONY : ILP.c.o
+
+ILP.i: ILP.c.i
+
+.PHONY : ILP.i
+
+# target to preprocess a source file
+ILP.c.i:
+	$(MAKE) -f CMakeFiles/PLI.dir/build.make CMakeFiles/PLI.dir/ILP.c.i
+.PHONY : ILP.c.i
+
+ILP.s: ILP.c.s
+
+.PHONY : ILP.s
+
+# target to generate assembly for a file
+ILP.c.s:
+	$(MAKE) -f CMakeFiles/PLI.dir/build.make CMakeFiles/PLI.dir/ILP.c.s
+.PHONY : ILP.c.s
+
+TAD_AGraph.o: TAD_AGraph.c.o
+
+.PHONY : TAD_AGraph.o
+
+# target to build an object file
+TAD_AGraph.c.o:
+	$(MAKE) -f CMakeFiles/PLI.dir/build.make CMakeFiles/PLI.dir/TAD_AGraph.c.o
+.PHONY : TAD_AGraph.c.o
+
+TAD_AGraph.i: TAD_AGraph.c.i
+
+.PHONY : TAD_AGraph.i
+
+# target to preprocess a source file
+TAD_AGraph.c.i:
+	$(MAKE) -f CMakeFiles/PLI.dir/build.make CMakeFiles/PLI.dir/TAD_AGraph.c.i
+.PHONY : TAD_AGraph.c.i
+
+TAD_AGraph.s: TAD_AGraph.c.s
+
+.PHONY : TAD_AGraph.s
+
+# target to generate assembly for a file
+TAD_AGraph.c.s:
+	$(MAKE) -f CMakeFiles/PLI.dir/build.make CMakeFiles/PLI.dir/TAD_AGraph.c.s
+.PHONY : TAD_AGraph.c.s
+
 TAD_UELGraph.o: TAD_UELGraph.c.o
 
 .PHONY : TAD_UELGraph.o
@@ -186,6 +240,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... PLI"
+	@echo "... ILP.o"
+	@echo "... ILP.i"
+	@echo "... ILP.s"
+	@echo "... TAD_AGraph.o"
+	@echo "... TAD_AGraph.i"
+	@echo "... TAD_AGraph.s"
 	@echo "... TAD_UELGraph.o"
 	@echo "... TAD_UELGraph.i"
 	@echo "... TAD_UELGraph.s"

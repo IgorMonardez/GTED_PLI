@@ -76,6 +76,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/ILP.c">
+			<Option target="PLI"/>
+		</Unit>
+		<Unit filename="/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/ILP.h">
+			<Option target="PLI"/>
+		</Unit>
+		<Unit filename="/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_AGraph.c">
+			<Option target="PLI"/>
+		</Unit>
+		<Unit filename="/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_AGraph.h">
+			<Option target="PLI"/>
+		</Unit>
 		<Unit filename="/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.c">
 			<Option target="PLI"/>
 		</Unit>

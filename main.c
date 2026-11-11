@@ -1,6 +1,7 @@
 #define _POSIX_C_SOURCE 200809L
 #include "TAD_UELGraph.h"
 #include "TAD_AGraph.h"
+#include "ILP.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,8 +13,8 @@
 /* ------------------------------------------------------------------ */
 
 typedef struct {
-    char     *path;    /* caminho do arquivo de origem (owned)   */
-    UELGraph *graph;   /* grafo parseado             (owned)     */
+    char     *path;
+    UELGraph *graph;
 } LoadedGraph;
 
 typedef struct {
@@ -169,6 +170,7 @@ static void print_collection(const GraphCollection *gc)
 /* main                                                               */
 /* ------------------------------------------------------------------ */
 
+
 int main(int argc, char **argv)
 {
     if (argc < 2) {
@@ -193,28 +195,25 @@ int main(int argc, char **argv)
     if (rc != 0)
         fprintf(stderr, "aviso: houve falha(s) durante o carregamento\n");
 
-    /* --- a partir daqui, os grafos estão em gc.items[0..gc.count-1].graph --- */
     print_collection(&gc);
 
-    for(size_t i = 0; i<gc.count; i++) {
-        for(size_t j = 0; j<gc.count;j++) {
+    for(size_t i = 0; i < gc.count; i++) {
+        for(size_t j = 0; j < gc.count; j++) {
             if(i != j) {
-                printf("AG entre G1: %s e G2: %s", gc.items[i].path, gc.items[j].path);
+                printf("--- AG entre G1: %s e G2: %s ---\n", gc.items[i].path, gc.items[j].path);
                 AGraph *ag = agraph_create(gc.items[i].graph, gc.items[j].graph);
-                agraph_print(ag);
+
+                if (ag) {
+                    // agraph_print(ag); // Descomente se quiser ver o grafo de alinhamento
+
+                    // Chama o resolvedor do CPLEX
+                    solve_ilp_cplex(ag, gc.items[i].graph, gc.items[j].graph);
+
+                    agraph_free(ag); // <--- IMPORTANTE: Evita vazamento de memória
+                }
             }
         }
     }
-
-
-    /* Exemplo do que fica possível fazer agora:
-     *
-     *   for (size_t i = 0; i < gc.count; i++) {
-     *       for (size_t j = i + 1; j < gc.count; j++) {
-     *           // computar GTED(gc.items[i].graph, gc.items[j].graph)
-     *       }
-     *   }
-     */
 
     gc_free(&gc);
     return rc == 0 ? 0 : 2;

@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/PLI.dir/main.c.o CMakeFiles/PLI.dir/TAD_UELGraph.c.o  -o PLI 
+/usr/bin/cc -g   CMakeFiles/PLI.dir/main.c.o CMakeFiles/PLI.dir/TAD_UELGraph.c.o CMakeFiles/PLI.dir/TAD_AGraph.c.o CMakeFiles/PLI.dir/ILP.c.o  -o PLI 

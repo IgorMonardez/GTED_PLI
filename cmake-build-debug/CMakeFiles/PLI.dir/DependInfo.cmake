@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/ILP.c" "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/cmake-build-debug/CMakeFiles/PLI.dir/ILP.c.o"
+  "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_AGraph.c" "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/cmake-build-debug/CMakeFiles/PLI.dir/TAD_AGraph.c.o"
   "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.c" "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/cmake-build-debug/CMakeFiles/PLI.dir/TAD_UELGraph.c.o"
   "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/main.c" "/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/cmake-build-debug/CMakeFiles/PLI.dir/main.c.o"
   )

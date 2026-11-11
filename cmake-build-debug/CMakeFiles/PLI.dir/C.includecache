@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_AGraph.c
+TAD_AGraph.h
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_AGraph.h
+stdio.h
+-
+stdlib.h
+-
+
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_AGraph.h
+TAD_UELGraph.h
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.h
+stddef.h
+-
+
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.c
+TAD_UELGraph.h
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
 /home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.h
 stddef.h
 -
@@ -15,14 +39,18 @@ stdlib.h
 -
 
 /home/igor/Documents/UFF/Mestrado/1_periodo/PLI/main.c
-stddef.h
--
-stdbool.h
+TAD_UELGraph.h
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.h
+TAD_AGraph.h
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_AGraph.h
+stdio.h
 -
 stdlib.h
 -
-stdio.h
+string.h
 -
-TAD_UELGraph.h
-/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.h
+sys/stat.h
+-
+dirent.h
+-
 
