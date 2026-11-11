@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.h
+stddef.h
+-
+stdbool.h
+-
+stdlib.h
+-
+
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/main.c
+stddef.h
+-
+stdbool.h
+-
+stdlib.h
+-
+stdio.h
+-
+TAD_UELGraph.h
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/TAD_UELGraph.h
+

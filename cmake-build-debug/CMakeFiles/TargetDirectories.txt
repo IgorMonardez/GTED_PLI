@@ -1,0 +1,3 @@
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/igor/Documents/UFF/Mestrado/1_periodo/PLI/cmake-build-debug/CMakeFiles/PLI.dir
