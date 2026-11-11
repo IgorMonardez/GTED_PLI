@@ -198,18 +198,35 @@ int main(int argc, char **argv)
     print_collection(&gc);
 
     for(size_t i = 0; i < gc.count; i++) {
-        for(size_t j = 0; j < gc.count; j++) {
-            if(i != j) {
-                printf("--- AG entre G1: %s e G2: %s ---\n", gc.items[i].path, gc.items[j].path);
-                AGraph *ag = agraph_create(gc.items[i].graph, gc.items[j].graph);
+        const char *path1 = gc.items[i].path;
 
-                if (ag) {
-                    // agraph_print(ag); // Descomente se quiser ver o grafo de alinhamento
+        if (strstr(path1, "3cycle_1_") != NULL) {
 
-                    // Chama o resolvedor do CPLEX
-                    solve_ilp_cplex(ag, gc.items[i].graph, gc.items[j].graph);
+            char id[256] = {0};
+            const char *p_underscore = strrchr(path1, '_');
+            if (p_underscore) {
+                strcpy(id, p_underscore + 1); // Pega o que vem depois do último '_'
+                char *dot = strchr(id, '.');   // Acha o ".gfa"
+                if (dot) *dot = '\0';          // Corta a string para pegar só o número
+            }
 
-                    agraph_free(ag); // <--- IMPORTANTE: Evita vazamento de memória
+            char target_filename[512];
+            snprintf(target_filename, sizeof(target_filename), "3cycle_2_%s.gfa", id);
+
+            for(size_t j = 0; j < gc.count; j++) {
+                if (i == j) continue;
+
+
+                if (strstr(gc.items[j].path, target_filename) != NULL) {
+
+                    printf("--- AG entre G1: %s e G2: %s ---\n", gc.items[i].path, gc.items[j].path);
+                    AGraph *ag = agraph_create(gc.items[i].graph, gc.items[j].graph);
+
+                    if (ag) {
+                        solve_ilp_cplex(ag, gc.items[i].graph, gc.items[j].graph);
+                        agraph_free(ag);
+                    }
+                    break;
                 }
             }
         }
